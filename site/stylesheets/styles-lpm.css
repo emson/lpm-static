@@ -1,0 +1,614 @@
+/* @override http://localhost:3000/stylesheets/styles-lpm.css */
+
+/* LIBRARIES */
+/* reset */
+html{color: white; background-color: #fefef2; }body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:disc;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+/* fonts */
+body{font:14px/1.231 Georgia; line-height: 18px; font-weight: lighter;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+
+
+/* GRIDS */
+.line:after,.lastUnit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.line{*zoom:1;}
+.unit{float:left;}
+.size1of1{float:none;}
+.size1of2{width:50%;}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.lastUnit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}
+
+.custSize33 {
+	width:33.3333%;
+}
+
+.custSize56 {
+	width: 56.666%;
+}
+
+
+.prepend-250 {padding-left:250px;}
+.span-210 { width: 210px; }
+.span-500 { width: 500px; }
+.span-710 { width: 700px; }
+
+
+
+
+/* TEMPLATE */
+/* ====== Page Head, Body, and Foot ====== */
+body{_text-align:center;}/* IE5.5 */
+.main{display:table-cell;*display:block;width:auto;}
+.body,.main{*zoom:1;}
+.body:after,.main:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.page{margin:0 auto;width:960px;_text-align:left;} /* wraps other template elems to set width */ /* text-align IE5.5 */
+/* "old school" and "liquid" extend page to allow for different page widths */
+.oldSchool{width:750px;}
+.gs960{width:960px;}
+.liquid{width:auto;margin:0;}
+/* ====== Columns ====== */
+.leftCol{float:left;width:250px;_margin-right:-3px;}
+.rightCol{float:right;width:300px;_margin-left:-3px;}
+/* extend columns to allow for common column widths */
+.gMail{width:160px;}
+.gCal{width:180px;}
+.amazon{width:220px;}
+.yahoo{width:240px;}
+.width250{width:250px;}
+
+/* Site Specific */
+
+.colourLight {
+	color: white;
+}
+
+.justified {
+	text-align: justify;
+}
+
+.content {
+	padding: 20px 0 0 20px;
+	background-color: #938274;
+	height: 518px;
+	overflow: auto;
+}
+
+.wrapper {
+	padding: 0 20px 0px;
+	background-color: #9e9184;
+	height: 538px;
+}
+
+.showImg {
+	padding: 20px 0px;
+	background-color: #9e9184;
+	position: relative;
+	left: 0px;
+	bottom: 291px;
+}
+
+.sideBar {
+	color: #838084;
+}
+
+.sideBar quote {
+	font-style: italic;
+	padding-bottom: 10px;
+	line-height: 20px;
+}
+
+h1.logo {
+	margin: 0px;
+	padding: 0;
+	border: 0;
+	text-indent: -9999px;
+	width: 230px;
+	height: 230px;
+	background:  url("../images/logo.jpg") no-repeat; 
+}
+
+.searchForm{
+	width: 964px;
+	height: 59px;
+	background: white url("../img/search-bkgd.jpg") no-repeat; 
+}
+
+.clear{
+	clear: both;
+}
+
+.borders {
+  border: 1px solid #d3d3d3;
+}
+
+.bottomBorder {
+  border-bottom: 20px solid #9e9184;
+}
+
+.notopborder {
+  border-top: none;
+}
+
+/* Fixes IE Bug with rounded corners */
+img.noborders {
+	padding: 0;
+	margin: -1px;
+	border: none;
+}
+
+.bkgrd {
+	background-color: black;
+}
+
+.padTop { padding-top: 10px; }
+.padTop20 { padding-top: 20px; }
+.padTop40 { padding-top: 40px; }
+
+
+.padLeft { padding-left: 10px; }
+.padRight { padding-right: 10px; }
+
+.pad10 { padding: 10px; }
+.pad20 { padding: 20px; }
+
+.textCell {
+	padding: 17px 12px 10px 12px;
+}
+
+.shade {
+	background-color: #f1f1f1;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+blockquote {
+	margin-right: 10px;
+	font-style: italic;
+	background: url("../img/quotes.png") no-repeat  5px 5px; 
+	/*border: 1px solid #d3d3d3;*/
+	text-indent:20px;
+}
+
+blockquote p {
+	padding-top: 20px;
+}
+
+.benefits ul li{
+	margin-left: 5px;
+	padding: 4px 0;
+}
+
+.customThumb {
+	width: 120px;
+	float: left;
+}
+
+.customImg {
+	width: 270px;
+	float: left;
+}
+
+.textVAlign {
+	position: relative;
+	top: -0.5em;
+	padding-right: 10px;
+}
+
+.textVAlign2 {
+	position: relative;
+	top: -0.9em;
+}
+
+.hrExt {
+	margin-left: 0;
+}
+
+.pagebg{
+	background-color: #000000;
+}
+
+.centre {
+	text-align: center;
+}
+
+.lead {
+	/* 24px*/
+	font-size: 1.3em;
+}
+
+.price {
+	display: inline;
+	font-size: 1.5em;
+	color: #99050c;
+	font-weight: bold;
+}
+
+.smallPrice {
+	color: #99050c;
+}
+
+.small {
+	font-size: 0.8em;
+}
+
+.large {
+	font-size: 1.4em;
+}
+
+.light {
+	color: #7faac4;
+	font-weight: normal;
+}
+
+.spacer {
+	margin-left: 60px;
+}
+
+.vAligned {
+	padding: 15px 10px 5px 0;
+}
+
+.inline {
+	display: inline;
+}
+
+.footer {
+	color: #838084;
+	font-size: 0.7em;
+	text-align: center;
+}
+
+.footer a {
+	color: #838084;
+}
+
+/* Menu */
+
+.header {
+	height: 70px;
+}
+
+ul.inlineList {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.menu {
+	position: relative;
+	top: 10px;
+	float: left;
+	font-family: Georgia,  "Century Schoolbook", "Times New Roman", Times ;
+	text-align: center;
+	font-size: 19.1px;
+}
+
+.menu li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.menu li a {
+	padding: 3px 15px 3px 10px;
+	text-decoration: none;
+	font-weight: lighter;
+	color: #a3978b;
+	border-right: 1px solid #a3978b;
+}
+
+span.first, li a.first {
+	padding-left: 0;
+}
+
+.menu li a.last {
+	border-right: none;
+}
+
+.menu li a:hover {
+	color: white;
+}
+
+.active {
+	padding: 3px 15px 3px 10px;
+	color: white;
+	border-right: 1px solid #a3978b;
+}
+
+.inlineList li {
+	display: inline;
+}
+
+.spacedList li {
+	padding: 5px 0;
+	margin: 0 0 0 10px;
+	list-style: disc;
+}
+
+.listNoStyle {
+	margin: 0;
+	padding: 0;
+}
+
+.listNoStyle li {
+	padding-left: 10px;
+	list-style: none;
+}
+
+dt {
+	font-weight: bold;
+}
+
+
+.rightCol {
+	/*font-family: "tahoma";*/
+	font-size: 0.9em;
+}
+
+.bd .squishedList {
+	padding: 0;
+	margin: 0;
+}
+
+
+.searchForm .inlineList {
+	padding: 10px 0 0 200px;
+}
+
+#id_category{
+	width: 150px;
+}
+
+input#id_q {
+	width: 371px;
+	height: 38px;
+	background: gray url("../img/search-input.jpg") no-repeat; 
+	border: none;
+	font-size: 22px;
+	padding: 5px 0 0 12px;
+	margin: 0 10px;
+}
+
+input#id_q:focus {
+	/* removes safari focus higlighting */
+	outline: 0;
+}
+
+.right {
+	float: right;
+}
+
+/* Used to remove the space left when using a 
+	child element uses position absolute */
+.squashed {
+	height: 0;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.centreRow {
+	padding: 0;
+	margin: 10px 0 10px 0;
+}
+
+/* CSS Sprite */
+
+.catNav {
+	position: relative; 
+	margin: 10px auto; 
+	padding: 10px 0px;
+	width: 528px; 
+	height: 158px;
+}
+
+.catNav li {
+	width: 128px; 
+	height: 128px; 
+	position: absolute; 
+	display: block; 
+	list-style: none;
+}
+
+.catNav li#nav1 {
+	background: url(../img/cat-nav.png) 0px 0px no-repeat; 
+	left: 0px; }
+
+.catNav li#nav2 {
+	background: url(../img/cat-nav.png) -128px 0px no-repeat; 
+	left: 200px; }
+
+.catNav li#nav3 {
+	background: url(../img/cat-nav.png) -256px 0px no-repeat; 
+	left: 400px; }
+
+
+.catNav a {
+	width: 128px; 
+	height: 128px; 
+	display: block; 
+	color: #2794d2;
+	font-weight: bold;
+}
+
+.catNav #nav1 a:hover {
+	text-decoration: none;
+	background: url(../img/cat-nav.png) 0px -128px no-repeat; }
+
+.catNav #nav2 a:hover {
+	text-decoration: none;
+	background: url(../img/cat-nav.png) -128px -128px no-repeat; }
+
+.catNav #nav3 a:hover {
+	text-decoration: none;
+	background: url(../img/cat-nav.png) -256px -128px no-repeat; }
+
+
+.navText {
+	font-size: 1.4em;
+	position: relative;
+	top: 140px;
+	left: 2em;
+	padding: 4px;
+}
+
+
+a:visited .navText {
+	color: #2794d2;
+	padding: 6px 4px 2px 4px;
+}
+
+a:hover .navText {
+	color: #01fffc;
+	background-color: #2794d2;
+	padding: 6px 4px 2px 4px;
+}
+
+
+/* CONTENT */
+body{font-family: Georgia,  "Century Schoolbook", "Times New Roman", Times;}
+/* **************** CONTENT OBJECTS ***************** */
+/* ====== Default spacing ====== */
+h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote {padding:10px 10px;}
+h1, h2, h3, h4, h5, h6{padding:10px 0 0 10px;}
+pre{margin: 10px;}
+table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl{padding:0;}
+/* ====== Elements ====== */
+img{display:block;}
+em{font-style: italic;}
+strong{font-weight:bold;}
+hr{border: 2px solid #e2e2e2; border-width: 0 0 2px 0; margin: 20px 10px 10px 10px;}
+code{color:#0B8C8F;}
+/* ====== Headings ====== */
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1, .h1{font-size:24px;  font-weight:normal; font-style: normal; color:#ffffff;}
+h2, .h2{font-size:18px; font-weight:normal; font-style: normal; color:#ffffff;}
+h3, .h3{font-size:16px; font-weight:normal; font-style: normal; color: #ffffff;}
+h4, .h4{font-size:14px; font-weight:normal; font-style: normal; color: #333;}
+h5, .h5{font-size:14px; font-weight:bold; font-style: normal; color:#AE0345;}
+h6, .h6{font-size:14px; font-weight:normal;  font-style: italic; color:#333;}
+/* if additional headings are needed they should be created via additional classes, never via location dependant styling */
+.category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
+.category a{color: #333;}
+.important a{font-weight:bold;}
+/* links */
+a { color: #fff; ;text-decoration: underline }
+a:focus, a:hover {text-decoration: underline;}
+/* ====== Lists ======*/
+/* numbered list */
+ol.simpleList li{list-style-type: decimal; margin-left:40px;}
+/* standard list */
+ul.simpleList li{list-style-type:disc; margin-left:40px;}
+/* ====== Tables ====== */
+.data{padding: 20px; position:relative; zoom:1;vertical-align: top;border-right:solid 1px transparent;/* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data table {width:100%;border:1px solid #d3d3d3;}
+/*th, td{vertical-align:top;border:1px solid #d3d3d3;background-color: white;}*/
+.txtC, .data .txtC td, .data .txtC th{text-align:center;}
+.txtL, .data .txtL td, .data .txtL th{text-align:left;}
+.txtR, .data .txtR td, .data .txtR th{text-align:right;}
+.txtT, .data .txtT td, .data .txtT th{vertical-align:top;}
+.txtB, .data .txtB td, .data .txtB th{vertical-align:bottom;}
+.txtM, .data .txtM td, .data .txtM th{vertical-align:middle;}
+.data th,.data td{padding:3px 20px}
+.data thead tr{background-color: #fff0f8;}
+.data th{color: #000; font-weight:bold}
+/* specification table - extends data table */
+.spec{padding:10px;}
+.spec table{border-top: 1px solid #e2e2e2; border-bottom-color:#fff; border-left:none; border-right:none;}
+.spec th, .spec td{border:1px solid #e2e2e2; border-width: 1px 0; padding-left:0;}
+.spec .odd, .spec .even{background-color: #fff;}
+/* ====== blockquote ====== */
+cite{display:block; text-align:right; padding-top: 10px;}
+/* ====== callout ====== */
+.callout{font-size:189%;color:#999999; font-style:italic;}
+.callout cite{display:block; text-align:right;padding-top: 30px; font-size:69.25%;}
+.callout span.quot{font-size: 500%; vertical-align: sub; color:#e2e2e2; line-height:25px; font-weight:bold;}
+.callout span.quotLast{vertical-align:middle;}
+/* ====== image treatments (get more from jason santa maria) ====== */
+.caption{font-size:13px; color:#666666; font-style:italic;padding-top:0;}
+/* will need to either 
+1. find a way to capture the width of the caption in the width of the image or flash
+2. Set some default widths, mby use flickr widths?
+*/
+/* ====== media ====== */
+.media{overflow:hidden; overflow:visible; zoom:1;margin:10px;}
+.media .img{float:left;margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;}
+/* ====== special formatting classes ====== */
+.detail{color: #777; font-size:11px;display:block;}
+
+
+/* MOD */
+.mod{margin:10px;}
+.mod .inner{/*background: url(skin/transparent.png) repeat left top;*/}
+.hd,.bd,.ft{overflow:hidden;_overflow:visible; _zoom:1;}
+.inner{position:relative;}
+b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10;}
+.tl, .tr, .bl, .br{height:10px; width:10px;float:left;}
+.tl{background-position: left top;}
+.tr{background-position: right top;}
+.bl{background-position: left bottom;} 
+.br{background-position: right bottom;}
+.br,.tr{float:right;}
+.tr, .tl{overflow:hidden;margin-bottom:-32000px;}/* margin bottom needs to be < -9px */
+.bl,.br{margin-top:-10px;}
+.top{background-position:center top;}
+.bottom{background-position:center bottom;_zoom:1;}/* this zoom required for IE5.5 only*/
+/* complex */
+.complex{overflow:hidden;*position:relative;*zoom:1;}/* position/zoom required for IE7, 6, 5.5 */
+.complex .tl, .complex .tr{height:32000px; margin-bottom:-32000px;width:10px;}
+.complex .bl, .complex .br{/*margin-top:0;*/}
+.complex .top{height:5px;}
+.complex .bottom{height:5px;/*margin-top:-10px;*/}
+/* pop  */
+.pop{overflow:visible;margin: 10px 20px 20px 10px; background-position:left top;}
+.pop .inner{right:-10px; bottom:-10px; background-position:right bottom;padding:0 10px 10px 0;}
+.pop .tl, .pop .br{display:none;}
+.pop .bl{bottom:-10px;}
+.pop .tr{right:-10px;}
+
+
+/* Mod Skins */
+
+/* ----- simple (extends mod) ----- */
+.simple .inner {border:1px solid #d3d3d3;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
+.simple b{background-image:url(../img/skin/simple_corners-d3.png);}
+
+.simple {
+	background-color: white;
+}
+
+
+a.ignore, a.ignore:focus, a.ignore:hover {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+/* tabular */
+.priceTable table { border-collapse: separate; *border-collapse: collapse; width: 80%; font-size: 20px; font-family: Georgia,  "Century Schoolbook", "Times New Roman", Times ; color: #464646; }
+.priceTable table th,
+.priceTable table td { border: 1px solid #ccc; border-width: 1px 0 0 1px; text-align: center; padding: 10px 10px 6px; }
+.priceTable table .round_ul { border-radius: 4px 0 0 0; -webkit-border-top-left-radius: 4px; -moz-border-radius-topleft: 4px; -o-border-radius: 4px 0 0 0; -khtml-border-radius: 4px 0 0 0; }
+.priceTable table .round_bl { border-radius: 0 4px 0 0; -webkit-border-bottom-left-radius: 4px; -moz-border-radius-bottomleft: 4px; -o-border-radius: 0 4px 0 0; -khtml-border-radius: 0 4px 0 0; }
+.priceTable table .round_br { border-radius: 0 0 4px 0; -webkit-border-bottom-right-radius: 4px; -moz-border-radius-bottomright: 4px; -o-border-radius: 0 0 4px 0; -khtml-border-radius: 0 0 4px 0; }
+.priceTable table .round_ur { border-radius: 0 0 0 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topright: 4px; -o-border-radius: 0 0 0 4px; -khtml-border-radius: 0 0 0 4px; }
+.priceTable table .rt { border-right-width: 1px; }
+.priceTable table .btm { border-bottom-width: 1px; }
+
+.priceTable table { font-size: 18px; width: 465px; }
+.priceTable table th,
+.priceTable table td { padding: 12px 8px 8px; width: 24%; }
+.priceTable table .none { border: 0; }
+.priceTable table .model { background-color: #f7f7f7; width: 28%; }
+
+.video {
+	padding: 40px 10px 10px 40px;
+}
