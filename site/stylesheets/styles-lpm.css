@@ -2,7 +2,7 @@
 
 /* LIBRARIES */
 /* reset */
-html{color: white; background-color: #fefef2; }body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:disc;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+html{color: white; background-color: #cfc6b7; }body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:disc;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
 /* fonts */
 body{font:14px/1.231 Georgia; line-height: 18px; font-weight: lighter;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
 
@@ -34,9 +34,11 @@ body{font:14px/1.231 Georgia; line-height: 18px; font-weight: lighter;}select,in
 
 
 .prepend-250 {padding-left:250px;}
+.prepend-340 {padding-left:340px;}
+.prepend-360 {padding-left:380px;}
 .span-210 { width: 210px; }
 .span-500 { width: 500px; }
-.span-710 { width: 700px; }
+.span-710 { width: 710px; }
 
 
 
@@ -73,16 +75,51 @@ body{_text-align:center;}/* IE5.5 */
 }
 
 .content {
+	position: relative;
 	padding: 20px 0 0 20px;
 	background-color: #938274;
 	height: 518px;
 	overflow: auto;
 }
 
+.contentAlt {
+	position: relative;
+	padding: 20px 0 0 20px;
+	background-color: #ffffff;
+	color: black;
+	min-height: 518px;
+}
+
+.contentAlt h2, .contentBox h2 {
+	color: #938274;
+	font-size:24px;
+}
+
+.contentAlt h3, .contentBox h3 {
+	color: #938274;
+	font-size:18px;
+}
+
+.contentAlt a {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+h2.activeAlt {
+	color: black;
+}
+
 .wrapper {
 	padding: 0 20px 0px;
 	background-color: #9e9184;
 	height: 538px;
+}
+
+.wrapperAlt {
+	padding: 0 0 0 20px;
+	background-color: #9e9184;
+	min-height: 538px;
 }
 
 .showImg {
@@ -92,6 +129,10 @@ body{_text-align:center;}/* IE5.5 */
 	left: 0px;
 	bottom: 291px;
 }
+
+.buttonBar {
+	position: absolute;
+	bottom: 10px;}
 
 .sideBar {
 	color: #838084;
@@ -103,14 +144,20 @@ body{_text-align:center;}/* IE5.5 */
 	line-height: 20px;
 }
 
+.contentBox {
+	background-color: white;
+	border-top: solid 20px #9e9184;
+	padding: 20px;
+}
+
 h1.logo {
 	margin: 0px;
 	padding: 0;
 	border: 0;
 	text-indent: -9999px;
-	width: 230px;
-	height: 230px;
-	background:  url("../images/logo.jpg") no-repeat; 
+	width: 250px;
+	height: 265px;
+	background:  url("..images/logo.jpg") black no-repeat; 
 }
 
 .searchForm{
@@ -149,6 +196,7 @@ img.noborders {
 .padTop { padding-top: 10px; }
 .padTop20 { padding-top: 20px; }
 .padTop40 { padding-top: 40px; }
+.padTop50 { padding-top: 50px; }
 
 
 .padLeft { padding-left: 10px; }
@@ -215,6 +263,10 @@ blockquote p {
 	background-color: #000000;
 }
 
+.pagebgAlt{
+	background-color: #ffffff;
+}
+
 .centre {
 	text-align: center;
 }
@@ -274,6 +326,7 @@ blockquote p {
 
 .header {
 	height: 70px;
+	background-color: black;
 }
 
 ul.inlineList {
@@ -284,7 +337,6 @@ ul.inlineList {
 .menu {
 	position: relative;
 	top: 10px;
-	float: left;
 	font-family: Georgia,  "Century Schoolbook", "Times New Roman", Times ;
 	text-align: center;
 	font-size: 19.1px;
@@ -309,6 +361,10 @@ span.first, li a.first {
 }
 
 .menu li a.last {
+	border-right: none;
+}
+
+span.last {
 	border-right: none;
 }
 
@@ -383,6 +439,10 @@ input#id_q:focus {
 
 .right {
 	float: right;
+}
+
+.left {
+	float: left;
 }
 
 /* Used to remove the space left when using a 
@@ -484,7 +544,7 @@ table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, tab
 img{display:block;}
 em{font-style: italic;}
 strong{font-weight:bold;}
-hr{border: 2px solid #e2e2e2; border-width: 0 0 2px 0; margin: 20px 10px 10px 10px;}
+hr{border: 2px solid #938274; border-width: 0 0 2px 0; margin: 20px 30px 10px 10px;}
 code{color:#0B8C8F;}
 /* ====== Headings ====== */
 /* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
@@ -592,6 +652,9 @@ a.ignore, a.ignore:focus, a.ignore:hover {
 	border-bottom: none;
 }
 
+
+.contentBox a, .contentBox a:focus, .contentBox a:hover { color: #000; ;text-decoration: underline }
+
 /* tabular */
 .priceTable table { border-collapse: separate; *border-collapse: collapse; width: 80%; font-size: 20px; font-family: Georgia,  "Century Schoolbook", "Times New Roman", Times ; color: #464646; }
 .priceTable table th,
@@ -612,3 +675,4 @@ a.ignore, a.ignore:focus, a.ignore:hover {
 .video {
 	padding: 40px 10px 10px 40px;
 }
+

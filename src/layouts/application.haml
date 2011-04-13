@@ -1,35 +1,26 @@
 !!! Strict
 %html{html_attrs('en-en')}
-  %head
-    %title 
-      London Property Match 
-      | 
-      = @title
-    
-    %meta{ 'http-equiv' => 'Content-Type', :content => 'text/html;charset=UTF-8' }/
-    %meta{ :name => 'keywords', :lang => 'en', :content => 'London, property, property match' }/
-    %meta{ :name => 'description', :lang => 'en', :content => "London Property Match, London's most experienced and friendly home-finding service." }/
-    %link{ :href => 'stylesheets/styles-lpm.css', :media => 'all', :rel => 'stylesheet', :type => 'text/css' }/
+
+  = partial('partials/_header')
         
-    %body
+  %body
+    .padTop50
       .page.pagebg.bottomBorder
         .header
-          .prepend-250.span-710
-            = partial('partials/_menu')
+          = partial('partials/_menu')
         .clear
         .unit.width250.sideBar
           %a{ :href=>'/', :title=>'London Property Match: home page' }
             %h1.logo London Property Match
-          
+        
         .unit.span-500
           .wrapper
             .content
               = yield
 
         .unit.span-210
-          %img{ :src=>"images/#{@image}_quotes.jpg" }
+          %img{ :src=>"/images/#{@image}_quotes.jpg" }
         .clear
       .page
-        %img{ :src=>"images/#{@image}_image.jpg", :class=>'showImg' }
-        = partial('partials/_footer')
-    
+        %img{ :src=>"/images/#{@image}_image.jpg", :class=>'showImg' }
+  

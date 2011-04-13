@@ -1,0 +1,30 @@
+!!! Strict
+%html{html_attrs('en-en')}
+  
+  = partial('partials/_header')
+        
+  %body
+    .padTop50
+      .page.pagebgAlt
+        .header
+          = partial('partials/_menu')
+        .clear
+        .unit.width250.sideBar
+          %a{ :href=>'/', :title=>'London Property Match: home page' }
+            %h1.logo London Property Match
+          .contentBox
+            %h2.activeAlt 
+              %a{ :href=>'/newsletters.html', :title=>'Newsletter Spring 2011' }
+                Spring 2011
+            %h2.activeAlt 
+              %a{ :href=>'/newsletters/winter-2011/newsletter-winter.html', :title=>'Newsletter Winter 2011' }
+                Winter 2011
+            %h2.activeAlt 
+              %a{ :href=>'/newsletters/autumn-2010/newsletter-autumn.html', :title=>'Newsletter Autumn 2010' }
+                Autumn 2010
+        .unit.span-710
+          .wrapperAlt
+            .contentAlt
+              = yield
+        .clear
+    
