@@ -157,7 +157,7 @@ h1.logo {
 	text-indent: -9999px;
 	width: 250px;
 	height: 265px;
-	background:  url("..images/logo.jpg") black no-repeat; 
+	background:  url("../images/logo.jpg") black no-repeat; 
 }
 
 .searchForm{
