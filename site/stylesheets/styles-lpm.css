@@ -676,3 +676,16 @@ a.ignore, a.ignore:focus, a.ignore:hover {
 	padding: 40px 10px 10px 40px;
 }
 
+table, table tr, table th, table td{
+	border: 1px solid #333;
+}
+
+table th {
+	font-weight: bold;
+	background-color: #d6d6d8;
+	text-align: center;
+}
+
+table th, table td {
+	padding: 2px 5px 2px 5px;
+}
